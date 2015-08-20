@@ -4,9 +4,9 @@ package symbols;
  * Symbols like natural numbers, operator symbols etc
  */
 public interface Symbol {
-	
+
 //	/**
-//	 * equals Funktion für den Vergleich von Objekten vom Typ Symbol
+//	 * equals Funktion fï¿½r den Vergleich von Objekten vom Typ Symbol
 //	 */
 //	public boolean equals (Object o) {
 //		if (o == null)
@@ -22,7 +22,7 @@ public interface Symbol {
 //	}
 //	
 //	/**
-//	 * equals Funktion für den Vergleich von zwei Listen mit Objekten vom Typ Symbol als Inhalt
+//	 * equals Funktion fï¿½r den Vergleich von zwei Listen mit Objekten vom Typ Symbol als Inhalt
 //	 */
 //	public static boolean equals (List<Symbol> one, List<Symbol> two) {
 //		
@@ -38,5 +38,5 @@ public interface Symbol {
 //	    return one.toString().equals(two.toString());
 //	    
 //	}
-	
+
 }

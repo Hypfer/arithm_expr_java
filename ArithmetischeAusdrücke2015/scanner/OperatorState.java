@@ -1,18 +1,17 @@
 package scanner;
 
 
-
 /**
- * zuständig dafür, Operatorsymbole und mathematische Symbole in ein entsprechendes Objekt vom Typ Symbol umzuwandeln
+ * zustï¿½ndig dafï¿½r, Operatorsymbole und mathematische Symbole in ein entsprechendes Objekt vom Typ Symbol umzuwandeln
  */
 public class OperatorState extends State {
-	
-	
-//	private HashMap<Character, Symbol> operators;
+
+
+    //	private HashMap<Character, Symbol> operators;
 //	
-	public OperatorState (Scanner scanner) {
-		super(scanner);
-		
+    public OperatorState(Scanner scanner) {
+        super(scanner);
+
 //		operators = new HashMap<Character, Symbol>();
 //		operators.put('+', new Add());
 //		operators.put('-', new Sub());
@@ -20,19 +19,19 @@ public class OperatorState extends State {
 //		operators.put('/', new Div());
 //		operators.put('(', new BracketOpen());
 //		operators.put(')', new BracketClose());
-	}
+    }
 
-	@Override
-	public void scan(Character c) {
-		this.getMyScanner().skip();
-		this.getMyScanner().addSymbol(this.getMyScanner().getOperatorMap().get(c));
+    @Override
+    public void scan(Character c) {
+        this.getMyScanner().skip();
+        this.getMyScanner().addSymbol(this.getMyScanner().getOperatorMap().get(c));
 //		this.getMyScanner().addSymbol((transfer(c)));
-		this.getMyScanner().setState(new SelectionState(this.getMyScanner()));
-	}
-	
+        this.getMyScanner().setState(new SelectionState(this.getMyScanner()));
+    }
+
 //	/**
 //	 * wandelt einen Character c in ein entsprechendes Objekt vom Typ Symbol um
-//	 * und gibt dieses zurück
+//	 * und gibt dieses zurï¿½ck
 //	 */
 //	public Symbol transfer (Character c) {
 //	Add add = new Add();
@@ -57,10 +56,10 @@ public class OperatorState extends State {
 //		throw new IllegalArgumentException ("Unerlaubtes Symbol eingegeben!");
 //	}
 
-	@Override
-	public void finish() {		
-	}
-	
+    @Override
+    public void finish() {
+    }
+
 
 //	@Override
 //	public String getCollected() {

@@ -4,19 +4,19 @@ import chain.Chain;
 
 /**
  * Responsible for selecting next state depending
- * on current character 
+ * on current character
  */
 public class SelectionState extends State {
-	
-	private Chain stateChain;
-	
-	public SelectionState (Scanner scanner) {
-		super(scanner);
-		this.stateChain = new Chain(this.getMyScanner());
-	}
 
-	@Override
-	public void scan (Character c) {
+    private Chain stateChain;
+
+    public SelectionState(Scanner scanner) {
+        super(scanner);
+        this.stateChain = new Chain(this.getMyScanner());
+    }
+
+    @Override
+    public void scan(Character c) {
 //		if (Character.isWhitespace(c))
 //			this.getMyScanner().setState(new WhitespaceState(this.getMyScanner()));
 //		else if (Character.isDigit(c))
@@ -27,13 +27,13 @@ public class SelectionState extends State {
 //			this.getMyScanner().addSymbol(new ErrorToken(c));
 //			this.getMyScanner().skip();
 //		}
-		this.getMyScanner().setState(this.stateChain.matchState(c));
-		
-	}
+        this.getMyScanner().setState(this.stateChain.matchState(c));
 
-	@Override
-	public void finish() {		
-	}
+    }
+
+    @Override
+    public void finish() {
+    }
 
 //	@Override
 //	public String getCollected() {
